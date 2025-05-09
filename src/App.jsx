@@ -16,6 +16,12 @@ function App() {
   console.log(todos);
   return (
     <>
+      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+      <div className="flex gap-2 justify-between">
+        <div className="">1</div>
+        <div className="">2</div>
+        <div className="">3</div>
+      </div>
       <table>
         <thead>
           <tr>
@@ -34,10 +40,24 @@ function App() {
           })}
         </tbody>
       </table>
-
-      {posts.map((item) => {
-        return <div key={item.id}>{item.title}</div>;
-      })}
+      <table>
+        <thead>
+          <tr>
+            <th>posts</th>
+            <th>posts body </th>
+          </tr>
+        </thead>
+        <tbody>
+          {posts.map((item) => {
+            return (
+              <tr className="posts" key={item.id}>
+                <td>{item.title}</td>
+                <td>{item.body}</td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
     </>
   );
 }
