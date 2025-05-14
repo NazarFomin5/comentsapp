@@ -16,11 +16,24 @@ function App() {
   console.log(todos);
   return (
     <>
+      <div className="flex flex-wrap gap-[17.5px] flex-row md:flex-col">
+        <button className="flex-1 py-2 bg-blue-500 text-white rounded hidden md:block">
+          4
+        </button>
+
+        <button className="flex-1 py-2 bg-blue-500 text-white rounded">
+          5
+        </button>
+
+        <button className="flex-1 py-2 bg-blue-500 text-white rounded  md:hidden">
+          6
+        </button>
+      </div>
       <h1 className="text-3xl font-bold underline">Hello world!</h1>
       <div className="flex gap-2 justify-between">
-        <div className="">1</div>
-        <div className="">2</div>
-        <div className="">3</div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
       </div>
       <table>
         <thead>
